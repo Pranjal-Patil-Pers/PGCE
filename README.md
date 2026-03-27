@@ -54,7 +54,7 @@ constraints = [
 explainer, _ = build_constrained_explainer(
     dataframe=train_df,
     model=trained_model,
-    outcome_name="Event_Y_N",
+    outcome_name="target",
     constraints=constraints,
 )
 
@@ -67,6 +67,16 @@ cf_obj = generate_counterfactuals(
 
 cf_df = extract_first_counterfactual_df(cf_obj)
 ```
+
+Variable guide (one-liners):
+
+- `trained_model`: your trained binary classifier used to score candidate counterfactuals.
+- `train_df`: training table with feature columns plus the outcome column (`target`).
+- `query_df`: feature-only rows you want counterfactuals for.
+- `constraints`: list of constraint objects that penalize invalid counterfactuals.
+- `explainer`: configured constrained DiCE explainer used for optimization.
+- `cf_obj`: raw DiCE result object containing generated counterfactual sets.
+- `cf_df`: first counterfactual set from `cf_obj`, flattened into a pandas DataFrame.
 
 ## Example notebook
 
