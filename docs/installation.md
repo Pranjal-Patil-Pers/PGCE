@@ -11,20 +11,14 @@
 pip install -e .
 ```
 
-## Install with notebook extras
-
-```bash
-pip install -e ".[notebooks]"
-```
-
 ## Install with development tools
 
 ```bash
-pip install -e ".[dev,notebooks]"
+pip install -e ".[dev]"
 ```
 
 ## Verify
 
 ```bash
-python -c "import SEP_CFE_DiCE as m; print(sorted(m.__all__)[:5])"
+python -c "import PGCE as m; print(sorted(m.__all__)[:5])"
 ```

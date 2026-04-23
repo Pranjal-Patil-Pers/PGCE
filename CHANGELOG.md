@@ -6,8 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
-- Initial standalone extraction from `src/SEP_CFE_DiCE`.
+- Initial standalone release of the Physics-Constrained Counterfactual Explainations toolkit.
 - Packaging metadata (`pyproject.toml`) and installable `src/` layout.
-- Compatibility `CFEAnalyzer` included inside package.
-- Example notebook: `examples/sep_cfe_dice_quickstart.ipynb`.
-- Documentation pages for installation, quickstart, API, and development.
+- `PGCE` package rename and removal of notebook artifacts.
+- `LICENSE` and repository metadata prepared for standalone publishing.

@@ -3,14 +3,14 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "sep-cfe-dice"
+name = "PGCE"
 version = "0.1.0"
-description = "Standalone constrained DiCE toolkit for solar energetic particle counterfactual workflows"
+description = "Standalone constrained counterfactual toolkit for solar energetic particle workflows"
 readme = "README.md"
 requires-python = ">=3.9"
-license = { text = "MIT" }
+license = { file = "LICENSE" }
 authors = [
-  { name = "SolarEnergyParticlePrediction contributors" }
+  { name = "Pranjal Patil" }
 ]
 keywords = ["counterfactuals", "explainability", "dice", "solar physics", "ml"]
 classifiers = [
@@ -32,20 +32,16 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-notebooks = [
-  "jupyter>=1.0",
-  "ipykernel>=6.0"
-]
-
 dev = [
   "pytest>=7.0",
   "ruff>=0.5"
 ]
 
 [project.urls]
-Homepage = "https://github.com/your-org/sep-cfe-dice"
-Repository = "https://github.com/your-org/sep-cfe-dice"
-Issues = "https://github.com/your-org/sep-cfe-dice/issues"
+Homepage = "https://github.com/Pranjal-Patil-Pers/PGCE"
+Repository = "https://github.com/Pranjal-Patil-Pers/PGCE"
+Issues = "https://github.com/Pranjal-Patil-Pers/PGCE/issues"
+Changelog = "https://github.com/Pranjal-Patil-Pers/PGCE/blob/main/CHANGELOG.md"
 
 [tool.setuptools]
 package-dir = { "" = "src" }

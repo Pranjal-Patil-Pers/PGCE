@@ -16,7 +16,7 @@ query_df = pd.read_csv("query_rows.csv")
 ## 2. Define constraints
 
 ```python
-from SEP_CFE_DiCE import FeatureRangeConstraint, OrderedFeaturesConstraint
+from PGCE import FeatureRangeConstraint, OrderedFeaturesConstraint
 
 constraints = [
     FeatureRangeConstraint(
@@ -38,7 +38,7 @@ constraints = [
 ## 3. Build explainer
 
 ```python
-from SEP_CFE_DiCE import build_constrained_explainer
+from PGCE import build_constrained_explainer
 
 explainer, interfaces = build_constrained_explainer(
     dataframe=train_df,
@@ -51,7 +51,7 @@ explainer, interfaces = build_constrained_explainer(
 ## 4. Generate counterfactuals
 
 ```python
-from SEP_CFE_DiCE import generate_counterfactuals, extract_first_counterfactual_df
+from PGCE import generate_counterfactuals, extract_first_counterfactual_df
 
 cf_obj = generate_counterfactuals(
     explainer=explainer,
@@ -70,9 +70,9 @@ print(cf_df.head())
 ## 5. Plot feature deltas
 
 ```python
-from SEP_CFE_DiCE import plot_counterfactual_deltas
+from PGCE import plot_counterfactual_deltas
 
 plot_counterfactual_deltas(query_df.iloc[[0]], cf_df.drop(columns=["Event_Y_N"]))
 ```
 
-See `examples/sep_cfe_dice_quickstart.ipynb` for a complete, runnable walk-through.
+See the README for a complete usage example.

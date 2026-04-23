@@ -1,6 +1,6 @@
-# SEP_CFE_DiCE
+# PGCE
 
-Standalone Python package for constrained counterfactual generation with DiCE, extracted from `src/SEP_CFE_DiCE` in the Solar Energy Particle Prediction project.
+Standalone Python package for constrained counterfactual generation with DiCE, designed for standalone use in solar energetic particle workflows.
 
 ## What this package provides
 
@@ -12,7 +12,7 @@ Standalone Python package for constrained counterfactual generation with DiCE, e
 - Pipeline helpers for building DiCE interfaces and generating counterfactuals.
 - Counterfactual plotting utilities for feature and time-series views.
 - Inverse reconstruction utilities for rebuilding time-series curves from window-level counterfactual features.
-- `CFEAnalyzer` utilities retained for compatibility with existing notebooks.
+- `CFEAnalyzer` utilities for inspecting generated counterfactuals.
 
 ## Installation
 
@@ -20,17 +20,11 @@ Standalone Python package for constrained counterfactual generation with DiCE, e
 pip install -e .
 ```
 
-For notebook usage:
-
-```bash
-pip install -e ".[notebooks]"
-```
-
 ## Quick usage
 
 ```python
 import pandas as pd
-from SEP_CFE_DiCE import (
+from PGCE import (
     FeatureRangeConstraint,
     OrderedFeaturesConstraint,
     build_constrained_explainer,
@@ -78,32 +72,12 @@ Variable guide (one-liners):
 - `cf_obj`: raw DiCE result object containing generated counterfactual sets.
 - `cf_df`: first counterfactual set from `cf_obj`, flattened into a pandas DataFrame.
 
-## Example notebook
-
-Open:
-
-- `examples/sep_cfe_dice_quickstart.ipynb`
-
-The notebook shows:
-
-1. Building synthetic tabular training/query data.
-2. Training a sklearn model.
-3. Defining and applying constraints.
-4. Generating and plotting counterfactuals.
-
-## Documentation
-
-- `docs/installation.md`
-- `docs/quickstart.md`
-- `docs/api.md`
-- `docs/development.md`
-
 ## Development
 
 ```bash
 git clone <your-new-repo-url>
-cd sep-cfe-dice
-pip install -e ".[dev,notebooks]"
+cd PGCE
+pip install -e ".[dev]"
 pytest
 ```
 

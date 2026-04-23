@@ -4,8 +4,8 @@
 
 ```bash
 git clone <repo-url>
-cd sep-cfe-dice
-pip install -e ".[dev,notebooks]"
+cd PGCE
+pip install -e ".[dev]"
 ```
 
 ## Development workflow
@@ -19,7 +19,7 @@ ruff check src tests
 pytest
 ```
 
-4. Update docs and notebook examples if public behavior changed.
+4. Update docs if public behavior changed.
 5. Open a pull request with a clear summary.
 
 ## Pull request checklist
